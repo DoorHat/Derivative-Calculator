@@ -18,47 +18,56 @@ Finds the derivate of a given function
 
 #include <iostream>
 
+std::string getFunction();
+bool checkForTrig(std::string usersFunction);
 std::string chainRule();
 std::string productRule();
 std::string powerRule();
 std::string quotientRule();
 std::string constantRule();
 
+
 int main()
 {
-	
+	std::string usersFunction;
 	int methodChoice = 0;
 	char loopChoice = 'Y';
 	bool menuLoop = true;
 
-
-
 	do
 	{
 		system("CLS");
-		std::cout << "Choose which method of differentiation is being used in your problem: (1 = chain rule, 2 = product rule, 3 = quotient rule, 4 = power rule)" << std::endl;
+		std::cout << "Choose which method of differentiation is being used in your problem: (1 = power rule, 2 = product rule, 3 = quotient rule, 4 = chain rule)" << std::endl;
 		std::cin >> methodChoice;
 
 		switch (methodChoice)
 		{
 		case 1:
 		{
-			chainRule();
+			usersFunction = getFunction();
+			checkForTrig(usersFunction);
+			powerRule();
 			break;
 		}
 		case 2:
 		{
+			usersFunction = getFunction();
+			checkForTrig(usersFunction);
 			productRule();
 			break;
 		}
 		case 3:
-		{
+		{	
+			usersFunction = getFunction();
+			checkForTrig(usersFunction);
 			quotientRule();
 			break;
 		}
 		case 4:
 		{
-			powerRule();
+			usersFunction = getFunction();
+			checkForTrig(usersFunction);
+			chainRule();
 			break;
 		}
 		}
@@ -76,6 +85,31 @@ int main()
 	} while (menuLoop);
 
 
+}
+
+bool checkForTrig(std::string usersFunction)
+{
+	bool foundTrig;
+	std::string function;
+
+	// write code to loop through the users string to find trig functions.
+
+	if (foundTrig)
+	{
+		return true;
+	}
+
+	else
+	{
+		return false;
+	}
+
+}
+
+std::string getFunction()
+{
+	std::string test;
+	return test;
 }
 
 std::string chainRule()
