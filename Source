@@ -1,0 +1,105 @@
+/*
+-Derivative Calculator-
+
+Finds the derivate of a given function
+
+
+----------------------------------------------
+				Thoughts
+----------------------------------------------
+
+- use a menu to allow user to specify which method of differentiation should be used
+- figure out which differentiation technique must be used
+- create strategies for each differentiation technique
+- calculate the derivative
+- output answer
+
+*/
+
+#include <iostream>
+
+std::string chainRule();
+std::string productRule();
+std::string powerRule();
+std::string quotientRule();
+std::string constantRule();
+
+int main()
+{
+	
+	int methodChoice = 0;
+	char loopChoice = 'Y';
+	bool menuLoop = true;
+
+
+
+	do
+	{
+		system("CLS");
+		std::cout << "Choose which method of differentiation is being used in your problem: (1 = chain rule, 2 = product rule, 3 = quotient rule, 4 = power rule)" << std::endl;
+		std::cin >> methodChoice;
+
+		switch (methodChoice)
+		{
+		case 1:
+		{
+			chainRule();
+			break;
+		}
+		case 2:
+		{
+			productRule();
+			break;
+		}
+		case 3:
+		{
+			quotientRule();
+			break;
+		}
+		case 4:
+		{
+			powerRule();
+			break;
+		}
+		}
+
+		std::cout << "Would you like to do another calculation? (Y or N) ";
+		std::cin >> loopChoice;
+
+		loopChoice = toupper(loopChoice);
+
+		if (loopChoice == 'N')
+		{
+			menuLoop = false;
+		}
+
+	} while (menuLoop);
+
+
+}
+
+std::string chainRule()
+{
+	std::string test;
+	return test;
+}
+std::string productRule()
+{
+	std::string test;
+	return test;
+}
+std::string powerRule()
+{
+	std::string test;
+	return test;
+}
+std::string quotientRule()
+{
+	std::string test;
+	return test;
+}
+std::string constantRule()
+{
+	std::string test;
+	return test;
+}
